@@ -3,7 +3,7 @@ import Usuario from "./usuario";
 
 export interface IIssue {
     title:String;
-    desciption: String;
+    description: String;
     priority: Number;
     user: Types.ObjectId;
     createdAt:Date
@@ -14,7 +14,7 @@ const IssueSchema = new Schema<IIssue>({
         type: String,
         required: [true, "El título es requerido"]
     },
-    desciption:{
+    description:{
         type: String,
         required: [true, "Necesitamos una descripción"]
     },
@@ -35,6 +35,6 @@ const IssueSchema = new Schema<IIssue>({
         default: Date.now
     },
 })
-const Issue: Model<IIssue> = model<IIssue>("Issui", IssueSchema)
+const Issue: Model<IIssue> = model<IIssue>("Issue", IssueSchema)
 
-export default IIssue
+export default Issue;
