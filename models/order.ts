@@ -11,6 +11,7 @@ interface IItem {
     desc: String;
     id: Number;
     price: Number;
+    quantity: Number;
     name: String;
 }
 
@@ -54,6 +55,10 @@ const OrderSchema = new Schema<IOrder>({
                 required: true,
             },
             price: {
+                type: Number,
+                required: true,
+            },
+            quantity: {
                 type: Number,
                 required: true,
             },
