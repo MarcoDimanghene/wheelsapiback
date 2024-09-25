@@ -5,7 +5,7 @@ import Order, { IOrder } from "../models/order";
 export const getOrders = async (req: Request, res: Response) =>{
     const usuarioId: ObjectId = req.body.usuarioConfirmado._id;
 
-    const consulta = { usar: usuarioId};
+    const consulta = { user: usuarioId};
 
     const orders = await Order.find(consulta)
 
