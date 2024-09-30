@@ -23,7 +23,7 @@ export const createOrder = async (req: Request, res: Response) =>{
     const data = {
         ...orderData,
         user: usuarioId,
-        createrAt: new Date(),
+        createdAt: new Date(),
         status: "prending"
 
     }
