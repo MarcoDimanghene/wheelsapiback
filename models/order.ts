@@ -13,7 +13,7 @@ interface IItem {
     price: number;   // Precio del producto
     quantity: number; // Cantidad del producto
     name: string;    // Nombre del producto
-    img1: string;    // Imagen del producto
+    
 }
 
 export interface IOrder {
@@ -55,10 +55,7 @@ const OrderSchema = new Schema<IOrder>({
                 type: String,
                 required: true,
             },
-            img1: {
-                type: String,
-                required: true,
-            },
+            
             desc: {
                 type: String,
                 required: true,
