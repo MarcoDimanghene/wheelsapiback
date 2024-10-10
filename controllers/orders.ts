@@ -10,10 +10,8 @@ export const getOrders = async (req: Request, res: Response) =>{
     const orders = await Order.find(consulta)
 
     res.status(200).json({
-        data:{
-            ...orders
-        }
-    })
+            data: orders  
+        });
 }
 
 export const createOrder = async (req: Request, res: Response) =>{
